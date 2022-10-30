@@ -1,0 +1,42 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/db
+    username: root
+    password: 123456
+
+
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: auto
+
+
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
+  security:
+    user:
+      name: admin
+      password: admin
+  redis:
+    database: 0
+    host: 127.0.0.1
+    port: 6379
+    jedis:
+      pool:
+        max-active: 8
+        min-idle: 0
+        max-wait: -1s
+        max-idle: 8
+    lettuce:
+      shutdown-timeout: 100ms
+    timeout: 8000
+  cache:
+    type: redis
+  profiles:
+    active: dev
+  mvc:
+    pathmatch:
+      matching-strategy: ant-path-matcher

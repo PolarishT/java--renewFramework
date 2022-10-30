@@ -1,2 +1,5 @@
-# SSMP_INIT
-ssmp init
+# 工程简介
+最新版本的ssmp 开发框架
+# 延伸阅读
+
+
